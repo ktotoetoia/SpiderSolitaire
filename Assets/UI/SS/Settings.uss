@@ -1,0 +1,47 @@
+.backgroundVisualElement {
+    border-left-color: rgba(156, 156, 156, 0);
+    border-right-color: rgba(156, 156, 156, 0);
+    border-top-color: rgba(156, 156, 156, 0);
+    border-bottom-color: rgba(156, 156, 156, 0);
+    background-color: rgb(236, 236, 236);
+}
+
+.foregroundVisualElement {
+}
+
+.textButton {
+    -unity-font: url('project://database/Assets/Thaleah_PixelFont/Materials/ThaleahFat_TTF.ttf?fileID=12800000&guid=585188cdc4600544eb408bee749e4b3a&type=3#ThaleahFat_TTF');
+    -unity-font-definition: initial;
+    color: rgb(0, 220, 221);
+}
+
+.textButton:active {
+    color: rgb(137, 230, 253);
+}
+
+.settingsPanel {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    background-color: rgb(255, 255, 255);
+}
+
+.header {
+    font-size: 20px;
+    border-left-color: rgb(169, 169, 169);
+    border-right-color: rgb(169, 169, 169);
+    border-top-color: rgb(169, 169, 169);
+    border-bottom-color: rgb(169, 169, 169);
+    border-bottom-width: 1px;
+}
+
+Label {
+    -unity-font: url('project://database/Assets/Thaleah_PixelFont/Materials/ThaleahFat_TTF.ttf?fileID=12800000&guid=585188cdc4600544eb408bee749e4b3a&type=3#ThaleahFat_TTF');
+    -unity-font-definition: initial;
+    color: rgb(0, 0, 0);
+}

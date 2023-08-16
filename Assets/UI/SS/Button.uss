@@ -1,0 +1,41 @@
+Button {
+    background-color: rgb(0, 0, 0);
+    visibility: visible;
+    overflow: visible;
+    opacity: 1;
+    display: flex;
+    color: rgb(0, 0, 0);
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+    white-space: normal;
+    font-size: 24px;
+}
+
+.button {
+    flex-direction: column;
+    width: 60%;
+    left: auto;
+    position: relative;
+    height: 10%;
+    background-image: url('project://database/Assets/Sprites/UI/button.png?fileID=21300000&guid=9ef31736a1f50954ca2acf46a6ada614&type=3#button');
+    -unity-font: url('project://database/Assets/Thaleah_PixelFont/Materials/ThaleahFat_TTF.ttf?fileID=12800000&guid=585188cdc4600544eb408bee749e4b3a&type=3#ThaleahFat_TTF');
+    -unity-font-definition: initial;
+    font-size: 200%;
+}
+
+Button:active {
+    -unity-background-image-tint-color: rgb(123, 123, 123);
+    color: rgb(255, 255, 255);
+}
+
+Button:disabled {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.roundButton {
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}

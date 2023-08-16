@@ -1,0 +1,54 @@
+RadioButton {
+}
+
+.radioButton {
+    flex-direction: row;
+    height: 30px;
+}
+
+.radioButton .unity-radio-button__checkmark-background {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('project://database/Assets/Sprites/UI/ToggleButton.png?fileID=2800000&guid=0fb9f569701449c4eb02142c4a1c114b&type=3#ToggleButton');
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    left: auto;
+    right: 2%;
+    bottom: 10%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.radioButton .unity-radio-button__label {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    left: 2%;
+    font-size: 24px;
+    -unity-text-align: middle-left;
+    min-width: 0;
+    min-height: 0;
+}
+
+.radioButton .unity-radio-button__checkmark {
+    background-image: url('project://database/Assets/Sprites/UI/ToggleButtonB.png?fileID=2800000&guid=9db1e7dfad9c2e043918908c0514d11a&type=3#ToggleButtonB');
+    background-color: rgba(0, 0, 0, 0);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,17 @@
+RadioButtonGroup {
+}
+
+.radioButtonGroup {
+}
+
+.radioButtonGroup > .unity-base-field__label {
+    border-bottom-width: 1px;
+    border-left-color: rgb(149, 149, 149);
+    border-right-color: rgb(149, 149, 149);
+    border-top-color: rgb(149, 149, 149);
+    border-bottom-color: rgb(149, 149, 149);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
