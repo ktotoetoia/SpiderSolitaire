@@ -34,7 +34,3 @@
     margin-top: 6px;
     margin-bottom: 54px;
 }
-
-.unity-scroll-view__content-container {
-    flex-grow: 1;
-}

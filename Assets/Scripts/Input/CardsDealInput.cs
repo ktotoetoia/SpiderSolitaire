@@ -14,7 +14,7 @@ public class CardsDealInput : MonoBehaviour
 
     public int DealLast { get { return objects.Count; } }
     public DealCard LastCard { get { return objects.LastOrDefault().GetComponent<DealCard>(); } }
-    
+
     private void Start()
     {
         for (int i = 0; i < dealCount; i++)

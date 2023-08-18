@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using System.Collections;
 
 public class SettingsUI : MonoBehaviour
 {
@@ -11,21 +10,24 @@ public class SettingsUI : MonoBehaviour
     private VisualElement root;
     private List<RadioButton> radioButtons;
 
+    private RadioButton CurrentButton
+    {
+        get
+        {
+            return radioButtons[PlayerPrefs.GetInt(SaveKey)];
+        }
+    }
+
     private void Start()
     {
         document = GetComponent<UIDocument>();
         root = document.rootVisualElement;
         radioButtons = root.Query<RadioButton>().ToList();
-        GetCurrentButton().value = true;
+        CurrentButton.value = true;
 
         radioButtons[0].RegisterCallback<ChangeEvent<bool>>((evt) => ChangeSettings(evt, 1));
         radioButtons[1].RegisterCallback<ChangeEvent<bool>>((evt) => ChangeSettings(evt, 2));
         radioButtons[2].RegisterCallback<ChangeEvent<bool>>((evt) => ChangeSettings(evt, 4));
-    }
-
-    private RadioButton GetCurrentButton()
-    {
-        return radioButtons[PlayerPrefs.GetInt(SaveKey)];
     }
 
     private void SetCurrentButton(int value)

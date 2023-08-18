@@ -225,10 +225,11 @@ GameObject:
   m_Component:
   - component: {fileID: 157042257}
   - component: {fileID: 157042256}
+  - component: {fileID: 157042261}
   - component: {fileID: 157042258}
   - component: {fileID: 157042260}
-  - component: {fileID: 157042261}
   - component: {fileID: 157042262}
+  - component: {fileID: 157042264}
   - component: {fileID: 157042263}
   m_Layer: 5
   m_Name: SettingsUI
@@ -322,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: MoreGamesButton
-  url: https://play.google.com/store/apps/developer?id=IMR+Studio
+  url: https://play.google.com/store/apps/developer?id=Piece+of+Slate
 --- !u!114 &157042263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +338,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonName: GmailButton
   textToCopy: contactpieceofslate@gmail.com
+--- !u!114 &157042264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157042255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265f2d792e0a7d34e9a330d132ca6249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: ProjectSourceButton
+  url: https://github.com/ktotoetoia/SpiderSolitaire
 --- !u!1001 &1336789610
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-﻿public interface ICard : ICardInfo, IHasCardRow,IHasCardTransform
+﻿public interface ICard : ICardInfo, IHasCardRow, IHasCardTransform
 {
     CardRenderer CardRenderer { get; }
     bool IsAvailableToSelect { get; }

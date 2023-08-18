@@ -31,8 +31,9 @@ public class GameUI : MonoBehaviour
         bestTimeLabel = root.Q<Label>(BestTimeLabel);
         bestMovesLabel = root.Q<Label>(BestMovesLabel);
         root.Q<Button>(HintButton).clicked += () => hints.ShowHint();
+
         LoadMaxStats();
-        
+
         gameOverChecker.OnGameOver += () =>
         {
             updateTime = false;

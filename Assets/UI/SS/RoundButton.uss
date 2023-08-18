@@ -1,8 +1,6 @@
-:root{
-	--size-1: 48px;
+:root {
+    --size-1: 48px;
 }
 
-.roundButton{
-    height: var(--size-1);
-	width: var(--size-1);
+.roundButton {
 }

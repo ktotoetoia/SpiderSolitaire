@@ -1,14 +1,14 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/SS/Button.uss?fileID=7433441132597879392&amp;guid=446a182c15599e043b26959c06592084&amp;type=3#Button" />
     <Style src="project://database/Assets/UI/SS/Text.uss?fileID=7433441132597879392&amp;guid=2dbeef31d6d52ab4f9b90177735ce058&amp;type=3#Text" />
-    <Bitbebop.SafeArea name="SafeArea" style="align-items: stretch; justify-content: flex-start; align-self: auto; flex-direction: column; flex-shrink: 1; flex-wrap: nowrap; position: relative; flex-basis: auto; background-color: rgba(47, 149, 25, 0); left: auto; top: auto; right: auto; bottom: auto;">
-        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: space-between; flex-direction: column;">
-            <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: space-between; align-items: flex-start; align-self: auto; width: auto; height: auto;">
-                <ui:Button display-tooltip-when-elided="true" name="ExitButton" class="roundButton" style="width: 50px; height: 50px; align-self: auto; position: relative; background-image: url(&apos;project://database/Assets/Sprites/UI/UndoButton.png?fileID=2800000&amp;guid=53ab1d96f0307ae448ae036e01331adf&amp;type=3#UndoButton&apos;); background-color: rgba(255, 255, 255, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; scale: 1 1; -unity-background-scale-mode: scale-to-fit; min-width: auto; min-height: auto; max-width: none; max-height: none;" />
-                <ui:Button display-tooltip-when-elided="true" name="RestartButton" class="roundButton" style="width: 50px; height: 50px; align-self: auto; position: relative; background-image: url(&apos;project://database/Assets/Sprites/UI/restartButton.png?fileID=2800000&amp;guid=abff0cdcfe7d6004890cee300ec31444&amp;type=3#restartButton&apos;); background-color: rgba(255, 255, 255, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; scale: -1 1; -unity-background-scale-mode: scale-to-fit; min-width: auto; min-height: auto; max-width: none; max-height: none;" />
+    <Bitbebop.SafeArea name="SafeArea">
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:VisualElement name="VisualElement" style="flex-direction: row; justify-content: space-between; align-items: stretch; flex-grow: 1;">
+                <SquareButton scale="20" name="ExitButton" keep-direction="Vertical" class="roundButton" style="background-image: url(&apos;project://database/Assets/Sprites/UI/UndoButton.png?fileID=2800000&amp;guid=53ab1d96f0307ae448ae036e01331adf&amp;type=3#UndoButton&apos;);" />
+                <SquareButton focusable="true" scale="20" name="RestartButton" keep-direction="Vertical" class="roundButton" style="background-image: url(&apos;project://database/Assets/Sprites/UI/restartButton.png?fileID=2800000&amp;guid=abff0cdcfe7d6004890cee300ec31444&amp;type=3#restartButton&apos;); scale: -1 1;" />
             </ui:VisualElement>
-            <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; align-items: auto; justify-content: space-between;">
-                <ui:VisualElement name="ultra" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; flex-shrink: 1; justify-content: space-around;">
+            <ui:VisualElement name="VisualElement" style="align-items: auto; flex-direction: row; flex-grow: 1;">
+                <ui:VisualElement name="ultra" style="flex-grow: 1; flex-direction: row; flex-shrink: 1; justify-content: space-around;">
                     <ui:VisualElement name="CurrentLabelContainer" style="bottom: 10px; margin-left: 8px; margin-right: 0; margin-top: 0; margin-bottom: 0;">
                         <ui:Label tabindex="-1" text="Time 9999" display-tooltip-when-elided="true" name="TimeLabel" class="text" style="-unity-text-align: upper-center;" />
                         <ui:Label tabindex="-1" text="moves 9999" display-tooltip-when-elided="true" name="MovesLabel" class="text" style="-unity-text-align: upper-center;" />
@@ -18,7 +18,7 @@
                         <ui:Label tabindex="-1" text="Best 9999" display-tooltip-when-elided="true" name="BestMovesLabel" class="text" style="-unity-text-align: upper-center;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" name="HintButton" class="roundButton" style="margin-left: 12px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-image: url(&apos;project://database/Assets/Sprites/UI/HintButton.png?fileID=2800000&amp;guid=37b2c85d72cb100418087ca8d4437a01&amp;type=3#HintButton&apos;); width: 50px; height: 50px;" />
+                <SquareButton focusable="true" scale="20" name="HintButton" keep-direction="Vertical" class="roundButton" style="background-image: url(&apos;project://database/Assets/Sprites/UI/HintButton.png?fileID=2800000&amp;guid=37b2c85d72cb100418087ca8d4437a01&amp;type=3#HintButton&apos;);" />
             </ui:VisualElement>
         </ui:VisualElement>
     </Bitbebop.SafeArea>

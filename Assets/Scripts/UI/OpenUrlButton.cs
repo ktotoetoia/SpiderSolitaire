@@ -8,9 +8,7 @@ public class OpenUrlButton : MonoBehaviour
 
     private void OnEnable()
     {
-        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
-
-        Button button = root.Q<Button>(buttonName);
+        Button button = GetComponent<UIDocument>().rootVisualElement.Q<Button>(buttonName);
 
         button.clicked += () => Application.OpenURL(url);
     }

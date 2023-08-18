@@ -44,8 +44,8 @@ public class CardRow : ICardRow
 
     public bool CanAddCard(ICard card)
     {
-        return LastCard == null || 
-            LastCard.Value != CardValue.Ace && 
+        return LastCard == null ||
+            LastCard.Value != CardValue.Ace &&
             LastCard.Value - 1 == card.Value;
     }
 
@@ -95,7 +95,6 @@ public class CardRow : ICardRow
         IEnumerable<ICard> cards = GetLastSequence();
 
         Cards.ForEach(card => card.ChangeVisibility(cards.Contains(card)));
-
         CheckForMatch();
         OnUpdate?.Invoke(Cards);
     }
@@ -130,10 +129,10 @@ public class CardRow : ICardRow
 
     public IEnumerable<ICard> GetLastSequence()
     {
-        return Cards.LastSequence((current, next) => 
-        current.Value == next.Value + 1 
-        && current.WasShowed 
-        && next.WasShowed 
+        return Cards.LastSequence((current, next) =>
+        current.Value == next.Value + 1
+        && current.WasShowed
+        && next.WasShowed
         && current.Suit == next.Suit);
     }
 }

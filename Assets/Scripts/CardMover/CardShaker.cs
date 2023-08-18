@@ -17,7 +17,7 @@ public class CardShaker : MonoBehaviour
         Vector2 cardPosition = cardTransform.transform.position;
         float time = Time.deltaTime;
         int direction = 1;
-        
+
         yield return new WaitForEndOfFrame();
 
         while (GetNormalizedTime(time) < 1 && !cardTransform.IsMoving && cardTransform)

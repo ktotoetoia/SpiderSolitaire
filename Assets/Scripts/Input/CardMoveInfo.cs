@@ -22,18 +22,20 @@ public class CardMoveInfo
 
     private void RateMove()
     {
-        if (!PreviousCard?.WasShowed ?? false)
+        if (PreviousCard != null)
         {
-            MoveValue += 2;
-        }
-        else if(PreviousCard?.Value!= Card.Value + 1)
-        {
-            MoveValue += 1;
+            AddValueIf(!PreviousCard.WasShowed, 2);
+            AddValueIf(PreviousCard.Value != Card.Value + 1);
         }
 
-        if(cardToSetOn?.Suit == Card?.Suit)
+        AddValueIf(cardToSetOn?.Suit == Card?.Suit);
+    }
+
+    private void AddValueIf(bool condition, int value = 1)
+    {
+        if (condition)
         {
-            MoveValue += 1;
+            MoveValue += value;
         }
     }
 }

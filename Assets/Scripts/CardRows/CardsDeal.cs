@@ -16,10 +16,16 @@ public class CardsDeal
     {
         foreach (ICardRow row in cardRows)
         {
-            ICard card = cardFactory.Create();
-            card.CardTransform.Move(position);
-            row.AddCard(card);
-            card.ChangeVisibility(true);
+            CreateCard(row, position);
         }
+    }
+
+    private void CreateCard(ICardRow row, Vector2 position)
+    {
+        ICard card = cardFactory.Create();
+
+        card.CardTransform.Move(position);
+        row.AddCard(card);
+        card.ChangeVisibility(true);
     }
 }

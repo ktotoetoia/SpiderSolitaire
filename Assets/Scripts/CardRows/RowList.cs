@@ -40,17 +40,19 @@ public class RowList<T> : IEnumerable<T>
     public IEnumerable<T> RemoveAfter(T card)
     {
         IEnumerable<T> result = GetAfter(card);
+
         values = values.Except(result).ToList();
+
         return result;
     }
 
-    public T GetPrevious(T obj) 
+    public T GetPrevious(T obj)
     {
         T result = default;
 
-        foreach(T value in values)
+        foreach (T value in values)
         {
-            if(value.Equals(obj))
+            if (value.Equals(obj))
             {
                 break;
             }
@@ -83,7 +85,7 @@ public class RowList<T> : IEnumerable<T>
 
     public void ForEach(System.Action<T> action)
     {
-        foreach(T obj in values)
+        foreach (T obj in values)
         {
             action(obj);
         }

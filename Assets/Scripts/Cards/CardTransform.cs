@@ -29,7 +29,7 @@ public class CardTransform : MonoBehaviour
     public void SetPosition(Vector2 position)
     {
         this.position = position;
-        
+
         MainMove(position, DefaultMoveTime);
     }
 
@@ -64,7 +64,7 @@ public class CardTransform : MonoBehaviour
     private IEnumerator MainMovea(Vector2 position, float time)
     {
         IsMoving = true;
-        
+
         yield return Move(position, time);
 
         IsMoving = false;

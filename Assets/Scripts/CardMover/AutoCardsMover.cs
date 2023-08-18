@@ -22,7 +22,8 @@ public class AutoCardsMover : MonoBehaviour
 
         if (row != null)
         {
-            MoveCards(cards,row);
+            MoveCards(cards, row);
+
             return;
         }
 

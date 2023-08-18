@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
 
 public class CardInput : MonoBehaviour
 {
@@ -72,7 +72,7 @@ public class CardInput : MonoBehaviour
         SelectionInfo selectionInfo = cardSelection.SelectionInfo;
         ICard card = cardSelection.Deselect();
         List<GameObject> cards = cardSelection.GetCardsAtPosition(GetMousePosition());
-        
+
         cards.RemoveAll(x => selectionInfo.SelectedCards.Contains(x.GetComponent<ICard>()));
 
         ICardRow rowToAdd = cards.FirstOrDefault()?.GetComponent<IHasCardRow>().CardRow;
@@ -83,7 +83,7 @@ public class CardInput : MonoBehaviour
 
             return;
         }
-        
+
         selectionInfo.SelectedCards.ForEach(x => x.CardTransform.ResetPosition());
         cardShaker.ShakeCard(card);
     }

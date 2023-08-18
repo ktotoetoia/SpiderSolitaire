@@ -19,7 +19,7 @@ public class CardMover : MonoBehaviour, ICardMover
             {
                 Vector2 movePosition = position + (selectionInfo.OnSelectPositions[i] - selectionInfo.InputPosition);
 
-                selectionInfo.SelectedCards[i].CardTransform.MainMove(movePosition,0);
+                selectionInfo.SelectedCards[i].CardTransform.MainMove(movePosition, 0);
             }
         }
     }

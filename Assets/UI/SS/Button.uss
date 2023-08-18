@@ -39,3 +39,29 @@ Button:disabled {
     border-bottom-color: rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
 }
+
+SquareButton {
+    visibility: visible;
+    overflow: visible;
+    opacity: 1;
+    display: flex;
+    color: rgb(0, 0, 0);
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+    white-space: normal;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+SquareButton:active {
+    -unity-background-image-tint-color: rgb(123, 123, 123);
+    color: rgb(255, 255, 255);
+}
+
+SquareButton:disabled {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}

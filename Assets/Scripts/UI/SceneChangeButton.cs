@@ -14,7 +14,7 @@ public class SceneChangeButton : MonoBehaviour
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
         button = root.Q<Button>(buttonName);
-        button.clicked += () => ChangeScene();
+        button.clicked += ChangeScene;
     }
 
     private void ChangeScene()

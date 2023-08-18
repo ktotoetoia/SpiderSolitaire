@@ -4,6 +4,8 @@ using System.Linq;
 
 public class CardRowsContainer
 {
+    private const int maxLayer = 32767;
+
     public event Action OnMovePerformed;
 
     private delegate void CardIndexDelegate(ICard card, int index);
@@ -27,7 +29,7 @@ public class CardRowsContainer
     {
         int cardsCount = cards.Count();
 
-        ForEachCardIndex(cards, (card, index) => card.CardRenderer.SetMaxOrder(cardsCount - index));
+        ForEachCardIndex(cards, (card, index) => card.CardRenderer.SetSortingOrder(maxLayer - (cardsCount - index)));
     }
 
     private void UpdateRows()

@@ -32,7 +32,7 @@ public class GameInstaller : MonoInstaller
         Container.Bind<ICardFactory>()
                  .To<CardFactory>()
                  .AsSingle()
-                 .WithArguments(cardSettings.OfType<ICardSettings>().ToList(), cardPrefab,cardMoveTime);
+                 .WithArguments(cardSettings.OfType<ICardSettings>().ToList(), cardPrefab, cardMoveTime);
     }
 
     private void BindCardInfoRandomizer()

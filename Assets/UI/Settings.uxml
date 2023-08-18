@@ -30,7 +30,7 @@
                             <ui:Button text="copy contact email to clipboard" display-tooltip-when-elided="true" name="GmailButton" class="text defaultButton" style="overflow: visible; visibility: visible; display: flex; opacity: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
                         </ui:VisualElement>
                     </ui:VisualElement>
-                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); height: 48px; display: none;" />
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); height: 48px; display: flex;" />
                 </ui:ScrollView>
             </ui:VisualElement>
         </Bitbebop.SafeArea>

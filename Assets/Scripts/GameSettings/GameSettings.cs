@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityJSON;
-using System;
 
 public class GameSettings
 {
@@ -87,7 +87,7 @@ public class GameSettings
 
     private static bool FileExist()
     {
-        return System.IO.File.Exists(Path) && 
+        return System.IO.File.Exists(Path) &&
             !ThrowsException(() => DataPersistance.Load<GameSettings>(Path));
     }
 

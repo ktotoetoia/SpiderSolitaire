@@ -1,18 +1,20 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CardRowFactory : ICardRowFactory
 {
     private RandomCardFactory cardFactory;
     private GameObject cardPlace;
-    private float rowsDistance;
     private Transform parentTransform;
+    private float rowsDistance;
 
     public CardRowFactory(RandomCardFactory cardFactory, GameObject cardPlace, float rowsDistance)
     {
         this.cardPlace = cardPlace;
         this.cardFactory = cardFactory;
         this.rowsDistance = rowsDistance;
+
         parentTransform = Object.FindObjectOfType<CardParent>().transform;
     }
 
@@ -28,13 +30,9 @@ public class CardRowFactory : ICardRowFactory
 
     private List<ICard> GetRandomCards(int count)
     {
-        List<ICard> result = new List<ICard>();
-
-        for (int i = 0; i < count; i++)
-        {
-            result.Add(cardFactory.Create());
-        }
-
-        return result;
+        return Enumerable
+            .Range(0, count)
+            .Select(x => cardFactory.Create())
+            .ToList();
     }
 }

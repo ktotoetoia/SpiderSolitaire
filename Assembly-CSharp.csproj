@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Cards\Factories\RandomCardFactory.cs" />
     <Compile Include="Assets\Scripts\Input\CardsDealInput.cs" />
     <Compile Include="Assets\Scripts\GameSettings\EnterGame.cs" />
+    <Compile Include="Assets\Scripts\UI\SquareButton.cs" />
     <Compile Include="Assets\Scripts\CardRows\CardRowsCreator.cs" />
     <Compile Include="Assets\Scripts\Cards\Factories\ICardFactory.cs" />
     <Compile Include="Assets\Scripts\Input\Hints.cs" />
