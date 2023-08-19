@@ -25,6 +25,11 @@ public class SettingsUI : MonoBehaviour
         radioButtons = root.Query<RadioButton>().ToList();
         CurrentButton.value = true;
 
+        RegisterCallbacks();
+    }
+
+    private void RegisterCallbacks()
+    {
         radioButtons[0].RegisterCallback<ChangeEvent<bool>>((evt) => ChangeSettings(evt, 1));
         radioButtons[1].RegisterCallback<ChangeEvent<bool>>((evt) => ChangeSettings(evt, 2));
         radioButtons[2].RegisterCallback<ChangeEvent<bool>>((evt) => ChangeSettings(evt, 4));

@@ -1,11 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/SS/Button.uss?fileID=7433441132597879392&amp;guid=446a182c15599e043b26959c06592084&amp;type=3#Button" />
     <Style src="project://database/Assets/UI/SS/RoundButton.uss?fileID=7433441132597879392&amp;guid=0856a1d4d35af9843820a35b33976990&amp;type=3#RoundButton" />
-    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+    <Bitbebop.SafeArea>
         <SquareButton focusable="true" scale="10" keep-direction="Vertical" name="SettingsButton" style="align-self: flex-end; position: relative; background-image: url(&apos;project://database/Assets/Sprites/UI/SettingsButton.png?fileID=2800000&amp;guid=52a95026fe42eae4e870f375eb1df9f3&amp;type=3#SettingsButton&apos;); margin-left: 4px; margin-right: 12px; margin-top: 12px;" />
         <ui:VisualElement style="background-color: rgba(0, 0, 0, 0); flex-grow: 3; background-image: url(&apos;project://database/Assets/Sprites/EmptyIcon.png?fileID=2800000&amp;guid=eced5f23611670e439ecdb6190bd051d&amp;type=3#EmptyIcon&apos;); -unity-background-scale-mode: scale-to-fit;" />
         <ui:VisualElement name="buttonContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: space-around; align-self: stretch;">
             <ui:Button text="Play" display-tooltip-when-elided="true" name="PlayButton" usage-hints="None" focusable="true" enable-rich-text="true" class="button" style="border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); background-color: rgba(255, 255, 255, 0); -unity-background-scale-mode: stretch-to-fill; justify-content: flex-start; align-self: center; align-items: auto; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; top: auto; bottom: auto; color: rgb(0, 0, 0); height: 30%; min-height: auto;" />
         </ui:VisualElement>
-    </ui:VisualElement>
+    </Bitbebop.SafeArea>
 </ui:UXML>

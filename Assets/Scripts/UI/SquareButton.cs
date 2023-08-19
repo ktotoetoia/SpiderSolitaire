@@ -5,15 +5,17 @@ public class SquareButton : Button
     [UnityEngine.Scripting.Preserve]
     public new class UxmlTraits : VisualElement.UxmlTraits
     {
-        readonly UxmlFloatAttributeDescription scale =
+        private readonly UxmlFloatAttributeDescription scale =
             new() { name = "scale", defaultValue = 1f };
-        readonly UxmlEnumAttributeDescription<SliderDirection> keepAspectDirection =
+        private readonly UxmlEnumAttributeDescription<SliderDirection> keepAspectDirection =
             new() { name = "keep-direction", defaultValue = SliderDirection.Horizontal };
+
         public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
         {
             base.Init(ve, bag, cc);
-            var element = ve as SquareButton;
 
+            SquareButton element = ve as SquareButton;
+            
             element.Scale = scale.GetValueFromBag(bag, cc);
             element.KeepDirection = keepAspectDirection.GetValueFromBag(bag, cc);
 
@@ -35,26 +37,32 @@ public class SquareButton : Button
         RegisterCallback<AttachToPanelEvent>(OnAttachToPanelEvent);
     }
 
-    void OnAttachToPanelEvent(AttachToPanelEvent e)
+    private void OnAttachToPanelEvent(AttachToPanelEvent e)
     {
         parent?.RegisterCallback<GeometryChangedEvent>(OnGeometryChangedEvent);
         FitToParent();
     }
 
-    void OnGeometryChangedEvent(GeometryChangedEvent e)
+    private void OnGeometryChangedEvent(GeometryChangedEvent e)
     {
         FitToParent();
     }
 
-    void FitToParent()
+    private void FitToParent()
     {
-        if (parent == null)
+        VisualElement element = parent;
+
+        if (element == null)
         {
             return;
         }
 
-        var aspect = KeepDirection == SliderDirection.Horizontal ? parent.resolvedStyle.width : parent.resolvedStyle.height;
+        FitToElement(element);
+    }
 
+    private void FitToElement(VisualElement element)
+    {
+        float aspect = KeepDirection == SliderDirection.Horizontal ? element.resolvedStyle.width : element.resolvedStyle.height;
         float size = aspect * Scale / 100;
 
         style.width = size;

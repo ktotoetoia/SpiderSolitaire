@@ -69,7 +69,6 @@
     <Compile Include="Assets\Scripts\Cards\Factories\ICardFactory.cs" />
     <Compile Include="Assets\Scripts\Input\Hints.cs" />
     <Compile Include="Assets\Scripts\SceneTransitions\FadeTransition.cs" />
-    <Compile Include="Assets\Scripts\UI\LabelAutoFit.cs" />
     <Compile Include="Assets\Scripts\CardSelection\CardSelection.cs" />
     <Compile Include="Assets\Scripts\Input\CardMoveInfo.cs" />
     <Compile Include="Assets\Scripts\UI\GameUI.cs" />
